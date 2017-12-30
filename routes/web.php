@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', array('uses' => 'AccountController@index', 'as' => 'MyHomeAccount.route'));
+Route::get('/', array('uses' => 'ServiceController@index', 'as' => 'MyHomeService.route'));
+Route::get('/service/', array('uses' => 'ServiceController@index', 'as' => 'MyHomeService.route'));
 
 
 
