@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+div
+{
+	font-family:Verdana;font-size:14px;
+}
+.div1
+{
+	
+	margin:3px;display: inline-block;
+}
+.input
+{
+	margin:3px;border:1px solid;height:24px;
+}
+
+.clear
+{
+	clear:both;
+}
+
+.full
+{
+	clear:both;width:90%;margin:5px;float:left; 
+}
+
+button , .btn
+{
+	font-size:14px;font-family:inherit;border:1px solid;
+	border-radius:3px;padding:5px;height:30px;
+}
+.display45 , .display32 , .display20 , .display55 , .display15 , .display65
+{
+	dispay:inline;float:left;margin:3px;
+}
+.display65
+{
+	
+	 width:65%;
+}
+.display55
+{
+	
+	 width:55%;
+}
+.display45
+{
+	
+	 width:45%;
+}
+.display32
+{
+	
+	 width:32%;
+}
+
+.display20
+{
+	
+	 width:20%;
+}
+.display15
+{
+	
+	 width:15%;
+}
+
+
+textarea
+{
+	margin:3px;border:1px solid;height:124px;margin:10px 0;
+}
+
+a
+{
+	text-decoration:none;font-size:18px;
+	font-family:Calibri;color: #1A319A;
+}
