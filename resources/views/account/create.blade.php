@@ -59,5 +59,4 @@ Add Account
 
 {!! Form::close() !!}
 
-
 @endsection
