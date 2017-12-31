@@ -12,7 +12,7 @@
     | <a href = '/account/edit/{{$acs->id}}'> &raquo; Update {{$acs->name}} </a>
 </div>
 <div class ='full div1'>
-{{$acs->description}}
+{!! nl2br($acs->description) !!}
 </div>
 
 <div class ='full div1'>
