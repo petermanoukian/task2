@@ -33,7 +33,7 @@ class='input' required = 'required' >
 	{!! Form::file('logo', null,
 ['required']) !!}
 
-<input type = 'text' name = 'logo1' value = "{{$acc->logo}}" />
+<input type = 'hidden' name = 'logo1' value = "{{$acc->logo}}" />
 </div>
 
 
