@@ -11,10 +11,10 @@
 |
 */
 
+
+
 Route::get('/', array('uses' => 'ServiceController@index', 'as' => 'MyHomeService.route'));
 Route::get('/service/', array('uses' => 'ServiceController@index', 'as' => 'MyHomeService.route'));
-
-
 
 
 
@@ -43,13 +43,20 @@ Route::delete('service/{id}',array('uses' => 'ServiceController@destroy', 'as' =
 
 
 
+Route::get('/account/', array('uses' => 'AccountController@index', 'as' => 'MyHomeAccount.route'))->where('id', '[0-9]+');
+
+Route::get('/account/byservice/{service_id?}', array('uses' => 'AccountController@index', 'as' => 'MyHomeByService.route'))->where('id', '[0-9]+');
+
+//Route::get('/account/create', 'AccountController@create');
+//Route::get('/account/create/{service_id?}', 'AccountController@create');
 
 
-Route::get('/account/{service_id?}', array('uses' => 'AccountController@index', 'as' => 'MyHomeAccount.route'));
+Route::get('/account/create', array('uses' => 'AccountController@create', 'as' => 'MyHomeNewOkAccount.route'));
+
+Route::get('/account/create/{service_id?}', array('uses' => 'AccountController@create', 'as' => 'MyHomeNewAccountByService.route'))->where('service_id', '[0-9]+');
 
 
-Route::get('/account/create', 'AccountController@create');
-Route::get('/account/create/{service_id?}', 'AccountController@create');
+
 Route::post('/account/add'
 	,array('uses' => 'AccountController@store', 'as' => 'AddAccountImaged.route')	   
 		   
@@ -68,7 +75,7 @@ Route::patch( '/account/update/{id}',array('uses' => 'AccountController@update',
 
 Route::match(['put', 'patch'], '/account/update/{id}',array('uses' => 'AccountController@update', 'as' => 'AccountUpdate.route'));
 
-Route::post( '/account/update/{id}',array('uses' => 'AccountController@update', 'as' => 'AccountUpdate.route'));
+//Route::post( '/account/update/{id}',array('uses' => 'AccountController@update', 'as' => 'AccountUpdate.route'));
 
 
 Route::delete('account/{id}',array('uses' => 'AccountController@destroy', 'as' => 'MyDelAccount.route'));
