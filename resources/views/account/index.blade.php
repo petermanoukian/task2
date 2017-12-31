@@ -22,16 +22,16 @@ Accounts <a href = '/account/create'> Add Accounts </a>
 	<div class = 'full div1'>
 
 		<div class ='display65'>
-		{{$ac->name}}
-		{{$ac->contact_name}}
-		
+			Account : {{$ac->name}} - 
+			{{$ac->contact_name}}
+			
 
-		{{$ac->description}}
-	<img src = 	"{{ URL::to('/') }}/imgs/thumb/{{$ac->logo}}" />
+			Service : {{$ac->services->service_name}}
+			<img src = 	"{{ URL::to('/') }}/imgs/thumb/{{$ac->logo}}" />
 		</div>
 
-	<div class ='display15' > 
-		<a href = "account/edit/{{$ac->id}}"> &rsaquo; Edit </a> | 
+		<div class ='display15' > 
+			<a href = "account/edit/{{$ac->id}}"> &rsaquo; Edit </a> | 
 			<a href = "account/show/{{$ac->id}}">  &rsaquo; Details </a>
 		</div>
 
@@ -46,7 +46,7 @@ Accounts <a href = '/account/create'> Add Accounts </a>
 			'Onclick' => 'return ConfirmDelete();')) !!}
 
 
-				{!! Form::close() !!}
+			{!! Form::close() !!}
 		</div>
 	</div>
 	
