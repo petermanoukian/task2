@@ -4,9 +4,12 @@
 
 <div class ='full div1'>
 {{$acs->name}} is created with {{$acs->id}}
- | <a href = '/account'> View Account</a>
+ | <a href = '/account'> &rsaquo;  View Account</a>
  
-  | <a href = '/account/create'> Add Account</a>
+  | <a href = '/account/create'> &rsaquo; Add Account</a>
+  
+  
+    | <a href = '/account/edit/{{$acs->id}}'> &raquo; Update {{$acs->name}} </a>
 </div>
 <div class ='full div1'>
 {{$acs->description}}
