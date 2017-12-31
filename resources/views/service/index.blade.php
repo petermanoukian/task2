@@ -20,7 +20,7 @@ Services <a href = '/service/create'> Add Services </a>
 
 
 			<a href = "account/create/{{$service->id}}"> Add Account</a>
-		|  <a href = "account/{{$service->id}}"> View This accounts</a>
+		|  <a href = "account/byservice/{{$service->id}}"> View This accounts</a>
 
 		</div>
 
