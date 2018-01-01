@@ -30,8 +30,8 @@ Accounts <a href = '/account/create'> Add Accounts </a>
 			<img src = 	"{{ URL::to('/') }}/imgs/thumb/{{$ac->logo}}" />
 		</div>
 
-		<div class ='display15' > 
-			<a href = "account/edit/{{$ac->id}}"> &rsaquo; Edit </a> | 
+	<div class ='display15' > 
+		<a href = "account/edit/{{$ac->id}}"> &rsaquo; Edit </a> | 
 			<a href = "account/show/{{$ac->id}}">  &rsaquo; Details </a>
 		</div>
 
@@ -46,11 +46,15 @@ Accounts <a href = '/account/create'> Add Accounts </a>
 			'Onclick' => 'return ConfirmDelete();')) !!}
 
 
-			{!! Form::close() !!}
+				{!! Form::close() !!}
 		</div>
 	</div>
 	
 	@endforeach
+	<div class = 'full div1'>
+	{{ $accounts->links() }}
+	</div>
+	
 	@else
     No Services
     
@@ -74,3 +78,4 @@ else
 return false;
 }
 </script>
+
