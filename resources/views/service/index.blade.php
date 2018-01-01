@@ -19,8 +19,11 @@ Services <a href = '/service/create'> Add Services </a>
 		{{$service->service_name}}
 
 
-			<a href = "account/create/{{$service->id}}"> Add Account</a>
-		|  <a href = "account/byservice/{{$service->id}}"> View This accounts</a>
+		<a href = "account/create/{{$service->id}}"> Add Account</a>
+		|  <a href = "account/byservice/{{$service->id}}"> View  
+		
+		  {{ $service->account()->count() }}  accounts
+		</a>
 
 		</div>
 
@@ -45,6 +48,12 @@ Services <a href = '/service/create'> Add Services </a>
 	</div>
 	
 	@endforeach
+	
+	<div class = 'full div1'>
+	{{ $services->links() }}
+	</div>
+	
+	
 	@else
     No Services
     
