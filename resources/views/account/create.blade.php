@@ -35,7 +35,7 @@ class='input' required = 'required' >
 
 
 <div class ='full div1'>
-Contact Name <input type="text" name="contact_name" value="{{ old('contact_name') }}"
+Contact Name <input type="text" name="contact_name" value="{{ old('contact_name') }}"  required = 'required'
 class='input'>
 
 </div>
@@ -44,7 +44,7 @@ class='input'>
 
 <div class ='full div1'>
 <p> Details </p>
-{{ Form::textarea('description') }}
+{{ Form::textarea('description' ,'',array('required' => 'required')) }}
 </div>
 
 
@@ -58,5 +58,6 @@ Add Account
 </div>
 
 {!! Form::close() !!}
+
 
 @endsection
