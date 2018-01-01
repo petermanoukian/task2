@@ -22,12 +22,12 @@ class AccountController extends Controller
 	{
 		if($service_id!= "")
 		{
-			$accounts = Account::with('services')->where('services_id', '=', $service_id)->orderBy('id', 'DESC')->get();
+			$accounts = Account::with('services')->where('services_id', '=', $service_id)->orderBy('id', 'DESC')->paginate(6);
 			return view('account.index', compact('accounts','service_id'));
 		}
 		else
 		{
-			$accounts = Account::with('services')->orderBy('id', 'DESC')->get();
+			$accounts = Account::with('services')->orderBy('id', 'DESC')->paginate(6);
 			return view('account.index', compact('accounts'));
 		}
 		
@@ -36,7 +36,7 @@ class AccountController extends Controller
 	
 	public function create($service_id='')
 	{
-		$services = Services::pluck('service_name', 'id');
+		$services = Services::orderBy('id','desc')->pluck('service_name', 'id');
 		if($service_id!= "")
 		{
 			$serviceid = $service_id;
